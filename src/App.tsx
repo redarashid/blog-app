@@ -1,10 +1,15 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router";
+import "./App.css";
+import About from "./Pages/About";
 
 function App() {
-
   return (
-    <div className=' text-gray-950 font-bold text-7xl'>Welcom</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -2,21 +2,23 @@ import { PaperClipIcon } from "@heroicons/react/20/solid";
 
 const About = () => {
   return (
-    <div>
-      <div className="px-4 sm:px-0">
-        <h3 className="text-base/7 font-semibold text-gray-900">
-          Applicant Information
-        </h3>
-        <p className="mt-1 max-w-2xl text-sm/6 text-gray-500">
-          Personal details and application.
-        </p>
+    <div className=" container mx-auto p-4 mb-4">
+      <div className=" mx-auto max-w-2xl py-3 sm:py-10 lg:py-18 mb-4 text-center">
+        <div className=" text-center">
+          <h1 className=" text-4xl font-bold sm:text-6xl tracking-tight">
+            About
+          </h1>
+          <p className=" mt-6 text-lg leading-8 text-gray-600">
+            Personal information and application
+          </p>
+        </div>
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm/6 font-medium text-gray-900">Full name</dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Margot Foster
+              Rashid Reda
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -24,7 +26,7 @@ const About = () => {
               Application for
             </dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Backend Developer
+              Frontend Developer
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -32,7 +34,7 @@ const About = () => {
               Email address
             </dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              margotfoster@example.com
+              redarashid824@gmail.com
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -40,17 +42,19 @@ const About = () => {
               Salary expectation
             </dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              $120,000
+              $3000
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm/6 font-medium text-gray-900">About</dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim
-              incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
-              consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-              proident. Irure nostrud pariatur mollit ad adipisicing
-              reprehenderit deserunt qui eu.
+              Frontend Development with React, Tailwind CSS, and Ant Design
+              Building modern web applications requires efficient tools to
+              create responsive, scalable, and maintainable interfaces. React,
+              Tailwind CSS, and Ant Design (Antd) are three powerful
+              technologies that, when combined, enable developers to build
+              high-quality user interfaces with great flexibility and
+              efficiency.
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -67,14 +71,14 @@ const About = () => {
                     />
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
                       <span className="truncate font-medium">
-                        resume_back_end_developer.pdf
+                        resume_front_end_developer.pdf
                       </span>
-                      <span className="shrink-0 text-gray-400">2.4mb</span>
+                      <span className="shrink-0 text-gray-400">25.2kb</span>
                     </div>
                   </div>
                   <div className="ml-4 shrink-0">
                     <a
-                      href="#"
+                      href="https://docs.google.com/document/d/1LVARHRp3GvTfbPs50ZG-zVe-NcK8FzNh/edit?usp=sharing&ouid=116325559388912994155&rtpof=true&sd=true"
                       className="font-medium text-indigo-600 hover:text-indigo-500">
                       Download
                     </a>
@@ -88,14 +92,14 @@ const About = () => {
                     />
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
                       <span className="truncate font-medium">
-                        coverletter_back_end_developer.pdf
+                        coverletter_front_end_developer.pdf
                       </span>
-                      <span className="shrink-0 text-gray-400">4.5mb</span>
+                      <span className="shrink-0 text-gray-400">28.0kb</span>
                     </div>
                   </div>
                   <div className="ml-4 shrink-0">
                     <a
-                      href="#"
+                      href="https://docs.google.com/document/d/1LVARHRp3GvTfbPs50ZG-zVe-NcK8FzNh/edit?usp=sharing&ouid=116325559388912994155&rtpof=true&sd=true"
                       className="font-medium text-indigo-600 hover:text-indigo-500">
                       Download
                     </a>
