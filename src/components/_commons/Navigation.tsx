@@ -1,5 +1,7 @@
 import { Disclosure, DisclosureButton } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
+import { classNames } from "../../office/utils.lib";
 
 const Navigation = () => {
   return (
@@ -23,29 +25,48 @@ const Navigation = () => {
                 <div className=" text-center">
                   <div className=" hidden sm:ml-6 sm:block">
                     <div className=" flex space-x-4">
-                      <a
-                        id="posts"
-                        href="#"
-                        className=" text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium ">
+                      <NavLink
+                        to="/"
+                        className={({ isActive, isPending }) => {
+                          return classNames(
+                            isActive
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          );
+                        }}>
                         Posts
-                      </a>
-                      <a
-                        id="category"
-                        href="#"
-                        className=" text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium  ">
+                      </NavLink>
+                      <NavLink
+                        to="/categories"
+                        className={({ isActive, isPending }) => {
+                          return classNames(
+                            isActive
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          );
+                        }}>
                         Categories
-                      </a>
-                      <a
-                        id="about"
-                        href="#"
-                        className=" text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium  ">
+                      </NavLink>
+
+                      <NavLink
+                        to="/about"
+                        className={({ isActive, isPending }) => {
+                          return classNames(
+                            isActive
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          );
+                        }}>
                         About
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
 
-                <div className="-mr-2 flex md:hidden">
+                {/* <div className="-mr-2 flex md:hidden">
                   <Disclosure.Button className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700">
                     {open ? (
                       <XMarkIcon className="h-6 w-6" />
@@ -53,19 +74,50 @@ const Navigation = () => {
                       <Bars3Icon className="h-6 w-6" />
                     )}
                   </Disclosure.Button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
           <Disclosure.Panel className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a className="block px-3 py-2 rounded-md text-white bg-gray-700">
-                Home
-              </a>
-              <a className="block px-3 py-2 rounded-md text-white bg-gray-700">
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) => {
+                  return classNames(
+                    isActive
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  );
+                }}>
+                Posts
+              </NavLink>
+              <NavLink
+                to="/categories"
+                className={({ isActive, isPending }) => {
+                  return classNames(
+                    isActive
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  );
+                }}>
+                Categories
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                className={({ isActive, isPending }) => {
+                  return classNames(
+                    isActive
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  );
+                }}>
                 About
-              </a>
+              </NavLink>
             </div>
           </Disclosure.Panel>
         </>
