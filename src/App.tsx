@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import About from "./Pages/about/About";
 import Layout from "./components/_commons/Layout";
-import Category from "./Pages/categories/Category";
+import Category from "./Pages/categories";
 
 function App() {
   return (
