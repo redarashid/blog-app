@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import About from "./Pages/about/About";
 import Layout from "./components/_commons/Layout";
-import Category from "./components/categories/Category";
+import Category from "./Pages/categories/Category";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="/about" element={<About />} />
-        <Route path="/category" element={<Category />} />
+        <Route path="/categories" element={<Category />} />
       </Routes>
     </BrowserRouter>
   );

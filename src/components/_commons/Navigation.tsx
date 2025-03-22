@@ -27,7 +27,7 @@ const Navigation = () => {
                     <div className=" flex space-x-4">
                       <NavLink
                         to="/"
-                        className={({ isActive, isPending }) => {
+                        className={({ isActive }) => {
                           return classNames(
                             isActive
                               ? "bg-gray-900 text-white"
@@ -39,7 +39,7 @@ const Navigation = () => {
                       </NavLink>
                       <NavLink
                         to="/categories"
-                        className={({ isActive, isPending }) => {
+                        className={({ isActive }) => {
                           return classNames(
                             isActive
                               ? "bg-gray-900 text-white"
@@ -52,7 +52,7 @@ const Navigation = () => {
 
                       <NavLink
                         to="/about"
-                        className={({ isActive, isPending }) => {
+                        className={({ isActive }) => {
                           return classNames(
                             isActive
                               ? "bg-gray-900 text-white"
@@ -65,16 +65,6 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="-mr-2 flex md:hidden">
-                  <Disclosure.Button className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700">
-                    {open ? (
-                      <XMarkIcon className="h-6 w-6" />
-                    ) : (
-                      <Bars3Icon className="h-6 w-6" />
-                    )}
-                  </Disclosure.Button>
-                </div> */}
               </div>
             </div>
           </div>
@@ -83,7 +73,7 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <NavLink
                 to="/"
-                className={({ isActive, isPending }) => {
+                className={({ isActive }) => {
                   return classNames(
                     isActive
                       ? "bg-gray-900 text-white"
@@ -95,7 +85,7 @@ const Navigation = () => {
               </NavLink>
               <NavLink
                 to="/categories"
-                className={({ isActive, isPending }) => {
+                className={({ isActive }) => {
                   return classNames(
                     isActive
                       ? "bg-gray-900 text-white"
@@ -108,7 +98,7 @@ const Navigation = () => {
 
               <NavLink
                 to="/about"
-                className={({ isActive, isPending }) => {
+                className={({ isActive }) => {
                   return classNames(
                     isActive
                       ? "bg-gray-900 text-white"
