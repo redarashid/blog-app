@@ -2,7 +2,7 @@ import React from "react";
 import CategoryItem from "../../components/categories/CategoryItem";
 import { useGetCategoriesQuery } from "../../features/categories/category.api";
 
-const Category: React.FC = () => {
+const Categories: React.FC = () => {
   const {
     data: categories,
     error,
@@ -48,4 +48,4 @@ const Category: React.FC = () => {
   );
 };
 
-export default Category;
+export default Categories;

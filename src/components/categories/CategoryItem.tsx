@@ -1,5 +1,6 @@
 import React from "react";
 import { Category } from "../../models/category.model";
+import { truncate } from "../../office/utils.lib";
 
 interface CategoryItemProps {
   category: Category;
@@ -7,9 +8,13 @@ interface CategoryItemProps {
 
 const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
   return (
-    <div className=" bg-gray-50 rounded-lg cursor-pointer hover:scale-105 p-4 ">
-      <h1>{category.name}</h1>
-      <p>{category.description}</p>
+    <div className=" bg-gray-50 rounded-lg shadow-md hover:shadow-lg p-4 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+      <h3 className=" text-xl font-semibold text-gray-900 text-ellipsis">
+        {category.name}
+      </h3>
+      <p className=" text-gray-600 mt-2">
+        {truncate(category.description, 255)}
+      </p>
     </div>
   );
 };
