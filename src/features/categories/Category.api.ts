@@ -4,7 +4,7 @@ import { Category } from "../../models/category.model";
 export const categoryApi = createApi({
   reducerPath: "categoryApi",
 
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://localhost:5000/api" }),
 
   tagTypes: ["Category"],
 
