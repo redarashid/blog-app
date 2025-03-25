@@ -11,13 +11,12 @@ const Categories: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className=" w-full h-56 text-center self-center">Loading...</div>
+      <div className=" w-full h-5 text-center self-center">Loading...</div>
     );
   }
-
   if (error) {
     return (
-      <div className=" w-full h-56 text-center self-center">
+      <div className=" w-full h-5 text-center self-center">
         ِAn error have occured
       </div>
     );
