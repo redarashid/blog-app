@@ -15,7 +15,9 @@ const NotFound = () => {
         <div className=" mt-10 flex items-center justify-center gap-x-6 font-semibold">
           <Link to="/">
             <Flex gap="small" wrap>
-              <Button type="primary">Go back home</Button>
+              <Button className=" font-semibold" type="primary">
+                Go back home
+              </Button>
             </Flex>
           </Link>
         </div>

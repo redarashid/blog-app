@@ -6,7 +6,7 @@ const About = () => {
       <div className=" mx-auto max-w-2xl py-3 sm:py-10 lg:py-18 mb-4 ">
         <div className=" text-center">
           <div className=" text-4xl font-bold sm:text-6xl tracking-tight">
-            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-indigo-400">
+            <h1 className="bg-clip-text text-transparent bg-[#21798b]">
               About
             </h1>
           </div>
