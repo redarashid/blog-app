@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { categoryApi } from "./categories/category.api";
-import { setupListeners } from "@reduxjs/toolkit/query";
 import { postApi } from "./posts/post.api";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 const store = configureStore({
   reducer: {
