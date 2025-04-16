@@ -2,6 +2,7 @@ import React from "react";
 import { Post } from "../../models/post.model";
 import { formatDate, formatTime, truncate } from "../../office/utils.lib";
 import { useDeletePostMutation } from "../../features/posts/post.api";
+import { Link } from "react-router-dom";
 
 interface PostItemProps {
   post: Post;
@@ -38,7 +39,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
       </div>
       <div className=" w-full h-[0.025em] bg-gray-500 mt-2"></div>
       <div className=" w-full flex flex-row px-2 mt-2">
-        <link className=" text-gray-700">Edit</link>
+        <Link className=" text-gray-700 mr-4" to="/posts/update" state={{post: post}}>Edit</Link>
         <button className=" text-red-500" onClick={()=> handleDeletePost(post.id)}>Delete</button>
       </div>
     </div>
