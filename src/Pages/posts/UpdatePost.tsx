@@ -1,0 +1,5 @@
+
+
+const UpdatePost: FC.React = ()=> {
+    
+}
