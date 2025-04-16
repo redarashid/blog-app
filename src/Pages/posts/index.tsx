@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   if (error) {
     return (
       <div className=" w-full h-5 text-center self-center">
-        ِAn error have occured
+        An error have occured
       </div>
     );
   }

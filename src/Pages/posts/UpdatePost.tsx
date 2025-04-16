@@ -1,5 +1,3 @@
+const UpdatePost: React.FC = () => {};
 
-
-const UpdatePost: FC.React = ()=> {
-    
-}
+export default UpdatePost;
