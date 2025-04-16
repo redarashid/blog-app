@@ -1,6 +1,6 @@
 import React from "react";
 import { Post } from "../../models/post.model";
-import { truncate } from "../../office/utils.lib";
+import { formatDate, formatTime, truncate } from "../../office/utils.lib";
 import { useDeletePostMutation } from "../../features/posts/post.api";
 
 interface PostItemProps {
@@ -27,10 +27,20 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
           {post.category}
         </span>
       </div>
-      <h3 className=" text-xl font-semibold text-gray-900 text-ellipsis">
+      <div className=" w-full text-xs font-light text-gray-500 px-2 mt-4">
+        {formatDate(post.createdAt) + " " + formatTime(post.createdAt)}
+      </div>
+      <div className=" w-full text-2xl font-semibold text-gray-900 px-2 mt-2 truncate">
         {post.title}
-      </h3>
-      <p className=" text-gray-600 mt-2">{truncate(post.description, 300)}</p>
+      </div>
+      <div className=" w-full h-44 font-normal px-2 mt-2 overflow-hidden text-base">
+        {truncate(post.description, 300)} {/*Show the first 300 characters of the post description and if it's longer than that, cut it.*/}
+      </div>
+      <div className=" w-full h-[0.025em] bg-gray-500 mt-2"></div>
+      <div className=" w-full flex flex-row px-2 mt-2">
+        <link className=" text-gray-700">Edit</link>
+        <button className=" text-red-500" onClick={()=> handleDeletePost(post.id)}>Delete</button>
+      </div>
     </div>
   );
 };

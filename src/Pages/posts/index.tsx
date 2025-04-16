@@ -1,9 +1,9 @@
 import React from "react";
 import PostItem from "../../components/posts/PostItem";
-import { useGetCategoriesQuery } from "../../features/categories/category.api";
+import { useGetPostsQuery } from "../../features/posts/post.api";
 
 const Home: React.FC = () => {
-  const { data: posts, error, isLoading } = useGetCategoriesQuery("posts");
+  const { data: posts, error, isLoading } = useGetPostsQuery("posts");
 
   if (isLoading) {
     return (
