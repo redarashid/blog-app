@@ -22,7 +22,7 @@ const PostForm: React.FC<PostFormProps> = ({ post, onSubmit }) => {
 
 
 
-  const handleChange = (e: React.ChangeEvent<HTMLImageElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFromData((prevData)=> ({
         ...prevData,
@@ -53,7 +53,29 @@ const PostForm: React.FC<PostFormProps> = ({ post, onSubmit }) => {
       <div className=" relative w-full bg-indigo-400/80 h-80 rounded-xl">
         <img className=" w-full rounded-xl h-full object-cover" src={formData.image || imageUrls[0]} alt=""/>
       </div>
-      <div className="bg-blue-500 hover:bg-blue-700 text-white bottom-5 font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline cursor-pointer" onClick={getRandomImageUrl}>Regenerate</div>
+      <div className=" absolute bg-blue-500 hover:bg-blue-700 text-white bottom-5 font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline cursor-pointer" onClick={getRandomImageUrl}>
+        Regenerate
+      </div>
+      <div className=" mb-4">
+        <label htmlFor="title" className=" block text-gray-700 font-bold mb-2">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          className=" border w-full rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline              "
+        />
+      </div>
+      <div>
+        <label htmlFor="category" className="">Category</label>
+        <input
+          type=""
+          id="category"
+          name="category"
+          onChange={handleChange}
+        />
+      </div>
     </form>
   )
 };
