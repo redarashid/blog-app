@@ -5,7 +5,7 @@ import PostForm from "../../components/posts/PostForm";
 
 const UpdatePost: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const location = useLocation(); // In order to receive the post you followed from another page
   const { post } = location.state;
   const [updatePost] = useUpdatePostMutation();
 
@@ -13,9 +13,9 @@ const UpdatePost: React.FC = () => {
     return <div>No post data found</div>;
   }
 
-  const handleUpdate = (formatData: Post) => {
+  const handleUpdate = (formData: Post) => {
     const updatedPost: Post = {
-      ...formatData,
+      ...formData,
       id: post.id,
       createdAt: post.createdAt,
     };
