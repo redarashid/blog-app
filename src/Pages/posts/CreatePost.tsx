@@ -6,11 +6,11 @@ import PostForm from "../../components/posts/PostForm";
 
 const CreatePost: React.FC = () => {
   const navigate = useNavigate();
-  const [addNewPost, response] = useAddNewPostMutation();
+  const [addNewPost] = useAddNewPostMutation();
 
-  const handleCreatePost = (formtData: Post) => {
+  const handleCreatePost = (formData: Post) => {
     const newPost: Post = {
-      ...formtData,
+      ...formData,
       createdAt: new Date().toISOString(),
     };
     addNewPost(newPost)
