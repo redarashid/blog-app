@@ -16,10 +16,19 @@ const PostForm: React.FC<PostFormProps> = ({ post, onSubmit }) => {
   const [formData, setFromData] = React.useState<Post>({
     title: post?.title || "",
     description: post?.description || "",
-    image: post?.image || "",
+    image: post?.image || imageUrls[0],
     createdAt: post?.createdAt || "",
-    category: post?.category || "",
+    category: post?.category || category,
   });
+
+  // React.useEffect(() => {
+  //   if (!formData.category && categories && categories.length > 0) {
+  //     setFromData((prevData) => ({
+  //       ...prevData,
+  //       category: categories[0].name,
+  //     }));
+  //   }
+  // });
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -80,12 +89,16 @@ const PostForm: React.FC<PostFormProps> = ({ post, onSubmit }) => {
         <label htmlFor="category" className="">
           Category
         </label>
-        <select id="category" name="category" onChange={handleChange}>
+        <select
+          id="category"
+          value={formData.category}
+          name="category"
+          onChange={handleChange}>
           {categories &&
             categories.map((category: Category) => (
               <option
                 key={category.id}
-                value={formData.category}
+                value={category.name}
                 selected={category.name === formData.category}>
                 {category.name}
               </option>
