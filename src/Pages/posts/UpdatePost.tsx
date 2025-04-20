@@ -4,7 +4,7 @@ import { Post } from "../../models/post.model";
 import PostForm from "../../components/posts/PostForm";
 
 const UpdatePost: React.FC = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // To return the user after editing
   const location = useLocation(); // In order to receive the post you followed from another page
   const { post } = location.state;
   const [updatePost] = useUpdatePostMutation();
