@@ -29,18 +29,30 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
         </span>
       </div>
       <div className=" w-full text-xs font-light text-gray-500 px-2 mt-4">
-        {formatDate(post.createdAt) + " " + formatTime(post.createdAt)}
+        {post.createdAt
+          ? formatDate(post.createdAt) + " " + formatTime(post.createdAt)
+          : "No date"}
       </div>
       <div className=" w-full text-2xl font-semibold text-gray-900 px-2 mt-2 truncate">
         {post.title}
       </div>
       <div className=" w-full h-44 font-normal px-2 mt-2 overflow-hidden text-base">
-        {truncate(post.description, 300)} {/*Show the first 300 characters of the post description and if it's longer than that, cut it.*/}
+        {truncate(post.description || "", 300)}
+        {/*Show the first 300 characters of the post description and if it's longer than that, cut it.*/}
       </div>
       <div className=" w-full h-[0.025em] bg-gray-500 mt-2"></div>
       <div className=" w-full flex flex-row px-2 mt-2">
-        <Link className=" text-gray-700 mr-4" to="/posts/update" state={{post: post}}>Edit</Link>
-        <button className=" text-red-500" onClick={()=> handleDeletePost(post.id)}>Delete</button>
+        <Link
+          className=" text-gray-700 mr-4"
+          to="/posts/update"
+          state={{ post: post }}>
+          Edit
+        </Link>
+        <button
+          className=" text-red-500"
+          onClick={() => handleDeletePost(post.id)}>
+          Delete
+        </button>
       </div>
     </div>
   );
