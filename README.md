@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+# Tech Chronicles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- Project Description -->
+A simple blog project built with React.js, Redux, RTK Query, React Router, and Tailwind CSS. The project uses JSON Server as a mock API for data, allowing users to create, list, update, and delete blog posts.
 
-Currently, two official plugins are available:
+<!-- Project Screenshot -->
+![Project image](https://raw.githubusercontent.com/diina-gh/react-blog/main/public/images/rb-image1.png?token=GHSAT0AAAAAACEVCDSNWDCQI4CXXLH253XEZGHT3DQ)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- Table of Contents -->
+## Table of Contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+<!-- Features -->
+## Features
+- User-friendly interface for creating, updating, and deleting blog posts.
+- Seamless data fetching with RTK Query hooks.
+- Responsive design.
+- Categories data are also managed through the API.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<!-- Demo -->
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Demo
+Check out the live demo [https://react-blog-mocha.vercel.app/](https://react-blog-mocha.vercel.app/).
+
+<!-- Getting Started -->
+## Getting Started
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/diina-gh/react-blog.git
+cd react-blog
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Install JSON Server globaly:
+
+```bash
+npm install -g json-server
+```
+
+4. Start the development server:
+
+```bash
+npm run start:dev
+```
+
+Open your browser and go to http://localhost:3000 to view the app.
+
+<!-- Technologies Used -->
+## Technologies Used
+
+1. React.js with TypeScript
+2. Redux and RTK Query for state management
+3. React Router for navigation
+4. Tailwind CSS for styling
+5. JSON Server as the mock API
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please create a pull request or open an issue.
+
+## Authors
+Seydina GUEYE - Initial work
+
+
+
